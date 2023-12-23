@@ -6,12 +6,12 @@ import (
 )
 
 type BalanceSheets struct {
-	Symbol           string            `json:"symbol"`
-	AnnualReports    []AnnualReport    `json:"annualReports"`
-	QuarterlyReports []QuarterlyReport `json:"quarterlyReports"`
+	Symbol           	string            	 `json:"symbol"`
+	AnnualBalanceReports    []AnnualBalanceReport    `json:"annualReports"`
+	QuarterlyBalanceReports []QuarterlyBalanceReport `json:"quarterlyReports"`
 }
 
-type AnnualReport struct {
+type AnnualBalanceReport struct {
 	FiscalDateEnding                       string `json:"fiscalDateEnding"`
 	ReportedCurrency                       string `json:"reportedCurrency"`
 	TotalAssets                            AVInt  `json:"totalAssets"`
@@ -52,7 +52,7 @@ type AnnualReport struct {
 	CommonStockSharesOutstanding           AVInt  `json:"commonStockSharesOutstanding"`
 }
 
-type QuarterlyReport struct {
+type QuarterlyBalanceReport struct {
 	FiscalDateEnding                       string `json:"fiscalDateEnding"`
 	ReportedCurrency                       string `json:"reportedCurrency"`
 	TotalAssets                            AVInt  `json:"totalAssets"`

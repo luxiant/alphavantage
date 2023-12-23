@@ -6,12 +6,12 @@ import (
 )
 
 type CashFlows struct {
-	Symbol           string            `json:"symbol"`
-	AnnualReports    []AnnualReport    `json:"annualReports"`
-	QuarterlyReports []QuarterlyReport `json:"quarterlyReports"`
+	Symbol           		string            		`json:"symbol"`
+	AnnualCashflowReports		[]AnnualCashflowReport		`json:"annualReports"`
+	QuarterlyCashflowReports	[]QuarterlyCashflowReport	`json:"quarterlyReports"`
 }
 
-type AnnualReport struct {
+type AnnualCashflowReport struct {
 	FiscalDateEnding                      string `json:"fiscalDateEnding"`
 	ReportedCurrency                      string `json:"reportedCurrency"`
 	OperatingCashflow                     AVInt  `json:"operatingCashflow"`
@@ -43,7 +43,7 @@ type AnnualReport struct {
 	NetIncome                             AVInt  `json:"netIncome"`
 }
 
-type QuarterlyReport struct {
+type QuarterlyCashflowReport struct {
 	FiscalDateEnding                      string `json:"fiscalDateEnding"`
 	ReportedCurrency                      string `json:"reportedCurrency"`
 	OperatingCashflow                     AVInt  `json:"operatingCashflow"`

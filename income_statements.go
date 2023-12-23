@@ -6,11 +6,11 @@ import (
 )
 
 type IncomeStatements struct {
-	Symbol           string            `json:"symbol"`
-	AnnualReports    []AnnualReport    `json:"annualReports"`
-	QuarterlyReports []QuarterlyReport `json:"quarterlyReports"`
+	Symbol           	string            	`json:"symbol"`
+	AnnualIncomeReports	[]AnnualIncomeReport    `json:"annualReports"`
+	QuarterlyIncomeReports	[]QuarterlyIncomeReport `json:"quarterlyReports"`
 }
-type AnnualReport struct {
+type AnnualIncomeReport struct {
 	FiscalDateEnding                  string `json:"fiscalDateEnding"`
 	ReportedCurrency                  string `json:"reportedCurrency"`
 	GrossProfit                       AVInt  `json:"grossProfit"`
@@ -39,7 +39,7 @@ type AnnualReport struct {
 	NetIncome                         AVInt  `json:"netIncome"`
 }
 
-type QuarterlyReport struct {
+type QuarterlyIncomeReport struct {
 	FiscalDateEnding                  string `json:"fiscalDateEnding"`
 	ReportedCurrency                  string `json:"reportedCurrency"`
 	GrossProfit                       AVInt  `json:"grossProfit"`
